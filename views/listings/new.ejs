@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") -%>
+<div class="row mt-3">
+    <div class="col-8 offset-2"> 
+     
+        <br><br>
+        <h3>Create a new listing :</h3>
+        <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-3">
+                <lable for="title" class="form-lable">Title</lable>
+            <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required></div>
+            <div class="valid-feedback">Title looks good &#128077;</div>
+            <div class="invalid-feedback">Enter a valid title!</div>
+         
+    
+            <div class="mb-3">
+                <lable for="description" class="form-lable">Description</lable>
+                <textarea name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+                <div class="valid-feedback">Description looks good &#128077;</div>
+                <div class="invalid-feedback">Enter a valid description!</div>
+            </div>
+            
+             <div class="mb-3">
+                <lable for="image" class="form-lable">Upload image</lable>
+                <input name="listing[image]" type="file" class="form-control">
+                required
+             </div>
+
+             <div class="row">
+                <div class="mb-3 col-md-4">
+                    <lable for="price" class="form-lable">Price</lable>
+                    <input name="listing[price]" placeholder="enter price" type="number" class="form-control" required>
+                    <div class="valid-feedback">Price looks good &#129297;</div>
+                    <div class="invalid-feedback">Enter a valid price!</div>
+                </div>
+        
+                <div class="mb-3 col-md-8">
+                    <lable for="country" class="form-lable">Country</lable>
+                    <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required>
+                    <div class="valid-feedback">Awesome &#x270C;</div>
+                    <div class="invalid-feedback">Fill the name!</div>
+                </div>
+             </div>
+    
+            <div class="mb-3">
+                <lable for="location" class="form-lable">Location</lable>
+                <input name="listing[location]" placeholder="enter location" type="text" class="form-control" required>
+                <div class="valid-feedback">Great &#x1F91F;</div>
+                <div class="invalid-feedback">Enter a valid location!</div>
+            </div><br>
+            <button class="btn btn-dark add-btn">Add</button>
+            <br><br>
+        </form>
+     
+</div>
+</div>
+ 
